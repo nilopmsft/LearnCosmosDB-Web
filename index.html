@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/src/css/main.css">
+    <script src="/src/js/jquery-3.7.1.min.js"></script>
+    <script src="/src/js/main_functions.js"></script>
+</head>
+
+<body>
+
+    <div id="navigation">
+        <div id="navigation-content">
+            I am Nav, I will be Nav, Fear me
+            <br />
+            <button onClick="loadModule('modeling');">Modeling</button>
+            <button onClick="loadModule('write_throughput');">Write Throughput</button>
+            <button onClick="loadModule('changefeed');">Changefeed</button>
+        </div>
+    </div>
+
+    <div id="modules">
+        <div id="module-content">
+
+        </div>
+        <div id="module-about" style="visibility: hidden;">
+            This is where there would be more content about the module
+
+        </div>
+    </div>
+
+    <div id="footer">
+        <div id="footer-content">
+            <div class="api-status status-checking">
+                        Checking API
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    $(document).ready(function () {
+
+        $('button').click(function () {
+
+            $("#api_status").removeClass(removeStatusClasses).addClass(function () {
+                // TODO Call api to check module status
+                if (1 == 1) {
+                    return "status-online"
+                } else {
+                    return "status-offline"
+                }
+
+            })
+        })
+        $('button[id="button1"]').click(function () {
+            $(this).css('color', 'red').html('You Clicked');
+        });
+
+    });
+
+</script>
+</body>
+
+</html>

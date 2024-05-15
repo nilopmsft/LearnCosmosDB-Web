@@ -1,0 +1,24 @@
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+.api-status {
+  width:58px;
+  height:12px;
+  padding: 4px;
+  font-size: 10px;
+}
+.status-checking {
+    background-color: gold;
+}
+
+.status-online {
+  background-color: green;
+}
+
+.status-offline {
+  background-color: red;
+}
